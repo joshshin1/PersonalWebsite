@@ -1,9 +1,19 @@
 html, body {
-    background-color: lightgoldenrodyellow;
+    background-color: rgba(0, 0, 0, 1);
     height: 100%;
     width: 100%;
-    overflow: hidden;
     margin: 0;
+}
+
+.filter {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: rgba(255, 255, 0, 0.2);
 }
 
 .center {
@@ -25,12 +35,41 @@ html, body {
     right: 0;
 }
 
+.darkModeButton {
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    opacity: .75;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 150%;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: rgba(250, 250, 210, .5);
+    transition: .5s;
+    color: black;
+    opacity: 1;
+}
+
+.socials {
+    position: absolute;
+    top: 32%;
+    right: 20%;
+}
+
 .name {
     position: absolute;
-    height: 100%;
+    height: 23%;
     width: 100%;
     top: 8%;
     left: 15%;
+    background-image: linear-gradient(to right, rgba(250, 250, 210, .5), rgba(250, 250, 210, .5), rgba(0, 0, 0, .5));
+    padding-left: 40px;
 }
 
 .name h1 {
@@ -53,27 +92,67 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 90%;
+    width: 50%;
     height: 100%;
-    background-color: lightgoldenrodyellow;
-    border-right: 20px solid black;
+    background-color: rgba(0, 0, 0, .3);
+    transition: .5s;
+    opacity: 0;
 }
+
+    ul:hover {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .3);
+        transition: .5s;
+        opacity: 1;
+    }
 
 li a {
     background-color: black;
     display: block;
     color: white;
-    opacity: .75;
     font-size: 200%;
     font-family: sans-serif;
     padding: 50px 50px;
+    text-align: center;
     text-decoration: none;
-    border-bottom: 2px solid lightgoldenrodyellow;
+    border-bottom: 2px solid rgba(250, 250, 210, .5);
+    transition: .5s;
 }
 
-li a:hover {
-    background-color: lightgoldenrodyellow;
-    transition: .5s;
-    color: black;
-    opacity: .75;
+    li a:hover {
+        background-color: rgba(250, 250, 210, 1);
+        transition: .5s;
+        color: black;
+    }
+
+.textbox {
+    position: absolute;
+    background-color: rgba(250, 250, 210, .8);
+    width: 500px;
+    padding: 25px 50px 25px 50px;
+    border: solid 5px black;
+}
+
+.textbox h1 {
+    color: rgba(0, 0, 0, 1);
+    font-size: 250%;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.textbox p {
+    color: rgba(0, 0, 0, .75);
+    font-size: 150%;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.section {
+    position: relative;
+    display: block;
+    width: 100%;
 }

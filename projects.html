@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="filter" id="filter" hidden></div>
+    <div class="right" style="z-index: 9990;">
+        <button class="darkModeButton" onclick="changeMode()">Blue Light Filter</button>
+    </div>
+    <div class="left" style="position: fixed; z-index: 9989;">
+        <img src="sidebar_icon_white.png" width="20%" />
+    </div>
+    <div class="left" style="position: fixed; z-index: 9990;">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </div>
+    <img src="rmn.png" class="section" />
+    <div class="section" style="background-color: black;">
+        <h1 style="font-family: sans-serif; font-size: 300%; color: white; padding: 5% 15% 0% 15%; opacity: .75;">
+            My RetailMeNot Internship
+        </h1>
+        <p style="font-family: sans-serif; font-size: 150%; color: white; padding: 0% 15% 5% 15%; opacity: .5;">
+            Last summer (2021), I had the amazing opportunity to intern with RetailMeNot in Austin, Texas. I chose to work on the Content Characterization Service (CCS), a natural language processing model that
+            places coupons into categories based on their descriptions. Such categories include BOGO, dollar discount, percent off, and many more. My job was to automate the learning process of this model. To accomplish this task,
+            I first configured an AWS RDS instance using Terraform. In addition to configuring the database, I also wrote functions used to interact with the database using SQLAlchemy.
+            This database was used to store the output of our model during training (which could be right or wrong). Once the database was finished, I wrote a comparison function that pulled correct or "labeled" data from an S3 bucket.
+            The function then compared the output of our model with the correct output to check for correctness. Finally, to complete the automation process, I wrote a cronjob that ran the comparison function on a daily basis.
+            Unfortunately, I was not able to see my contributions to CCS make it to production, but I have high hopes that CCS will improve when it does. If you are reading this, I highly encourage you to check out
+            <a href="https://www.retailmenot.com/" target="_blank" style="color: white;">RetailMeNot's website</a>. They have amazing deals that have certainly changed my life for the better!
+        </p>
+    </div>
+    <img src="connect4.jpg" class="section" />
+    <div class="section" style="background-color: black;">
+        <h1 style="font-family: sans-serif; font-size: 300%; color: white; padding: 5% 15% 0% 15%; opacity: .75;">
+            Connect Four AI
+        </h1>
+        <p style="font-family: sans-serif; font-size: 150%; color: white; padding: 0% 15% 5% 15%; opacity: .5;">
+            Freshman year of college, I decided to take on my first personal project: A connect four AI. But that would be too easy. Instead of regular connect four, I modified the game to include two neutral pieces that each player
+            could place before their turn. I used a min-max algorithm with alpha-beta pruning to improve the speed of the AI and applied a genetic algorithm to try to find the best weights for the AI. Check out the repository for this project
+            <a href="https://github.com/joshshin1/Connect4" style="color: white;">here</a>!
+        </p>
+    </div>
+    <img src="keyboard.png" class="section" />
+    <div class="section" style="background-color: black;">
+        <h1 style="font-family: sans-serif; font-size: 300%; color: white; padding: 5% 15% 0% 15%; opacity: .75;">
+            Keylogger
+        </h1>
+        <p style="font-family: sans-serif; font-size: 150%; color: white; padding: 0% 15% 5% 15%; opacity: .5;">
+            With an interest in malware, I made my own keylogger after I completed my connect four AI. My keylogger is short and sweet, fully coded in python, but most importantly, functional. When I first created the project, I had an EC2 server
+            that the keylogger would send keystrokes to, but unfortunately the server became too expensive and I had to abandon it. In addition to the keylogger, I also created executables to install and retrieve the keylogger,
+            allowing a swift entry and exit. Check out the repository for this project <a href="https://github.com/joshshin1/Keylogger" style="color: white">here</a>!
+        </p>
+    </div>
+</body>
+</html>

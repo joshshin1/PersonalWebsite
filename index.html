@@ -2,8 +2,24 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js"></script>
 </head>
-<body>
+<body style="overflow: hidden">
+    <div class="filter" id="filter" hidden></div>
+    <div class="right" style="z-index: 9990;">
+        <button class="darkModeButton" onclick="changeMode()">Blue Light Filter</button>
+    </div>
+    <div class="left" style="position: fixed; z-index: 9989;">
+        <img src="sidebar_icon.png" width="20%" />
+    </div>
+    <div class="left" style="position: fixed; z-index: 9990;">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </div>
     <div>
         <div class="center">
             <img src="cancun_headshot.JPG" height="3500" width="2625" />
@@ -41,15 +57,21 @@
         <p>TAMU Computer Science</p>
         <p>TAMU Mathematics</p>
     </div>
-    <div class="left">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <div class="socials">
+        <a href="https://www.instagram.com/josh.shin/" target="_blank">
+            <img src="instagram_icon.png" height="100" width="100" />
+        </a>
+        <a href="mailto:josh.shin999@gmail.com" target="_blank">
+            <img src="mail_icon.png" height="100" width="100" />
+        </a>
+        <a href="https://www.linkedin.com/in/josh-shin-b0506819a/" target="_blank">
+            <img src="linkedin_icon.png" height="100" width="100" />
+        </a>
+        <a href="https://github.com/joshshin1" target="_blank">
+            <img src="github_icon.png" height="100" width="100" />
+        </a>
     </div>
+
 </body>
 </html>
 

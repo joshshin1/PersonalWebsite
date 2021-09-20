@@ -2,19 +2,26 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js"></script>
 </head>
 <body>
-    <div class="left">
+    <div class="filter" id="filter" hidden></div>
+    <div class="right" style="z-index: 9990;">
+        <button class="darkModeButton" onclick="changeMode()">Blue Light Filter</button>
+    </div>
+    <div class="left" style="position: fixed; z-index: 9989;">
+        <img src="sidebar_icon_white.png" width="20%" />
+    </div>
+    <div class="left" style="position: fixed; z-index: 9990;">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="resume.html">Resume</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
         </ul>
     </div>
     <div class="center">
-        <iframe src="https://drive.google.com/file/d/1D8RPItzNgFhQcJh94vLKrgLcR49vjwaO/preview" width="850" height="1060" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1D8RPItzNgFhQcJh94vLKrgLcR49vjwaO/preview" width="850" height="1060" allow="autoplay" style="border: solid 5px black"></iframe>
     </div>
 </body>
 </html>
